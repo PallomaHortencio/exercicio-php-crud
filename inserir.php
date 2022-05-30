@@ -1,3 +1,12 @@
+<?php
+require_once '..'
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,15 +24,15 @@
 
 	<form action="#" method="post">
 	    <p><label for="nome">Nome:</label>
-	    <input type="text" id="nome" required></p>
+	    <input type="text" name="" id="nome" required></p>
         
       <p><label for="primeira">Primeira nota:</label>
-	    <input type="number" id="primeira" step="0.1" min="0.0" max="10" required></p>
+	    <input type="number" name="" id="primeira" step="0.1" min="0.0" max="10" required></p>
 	    
 	    <p><label for="segunda">Segunda nota:</label>
-	    <input type="number" id="segunda" step="0.1" min="0.0" max="10" required></p>
+	    <input type="number" name="" id="segunda" step="0.1" min="0.0" max="10" required></p>
 	    
-      <button>Cadastrar aluno</button>
+      <button name="">Cadastrar aluno</button>
 	</form>
 
     <hr>
