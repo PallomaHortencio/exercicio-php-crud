@@ -18,6 +18,6 @@ try {
     die("erro: " .$erro->getMessage());
 }
 
-var_dump($conexao);
+/* var_dump($conexao); ver se a conexao funcionou */
 
 ?>

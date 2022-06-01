@@ -1,5 +1,33 @@
 <?php
-require_once '..'
+
+
+if( isset($_POST['inserir']) ){
+
+	require_once '../exercicio-php-crud/src/funcoes-alunos.php';
+
+
+	$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+
+	
+
+	$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+	$primeira = filter_input(INPUT_POST, 'primeira', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+	$segunda = filter_input(INPUT_POST, 'segunda', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+
+
+	$media = ($primeira + $segunda)/2;
+
+	if($media >= 7){
+		$situacao = "Aprovado";
+	} else {
+		$situacao = "Reprovado";
+	}
+
+
+    inserirAluno($conexao, $nome, $primeira, $segunda, $media, $situacao);
+
+	header("location:visualizar.php");
+}
 
 
 ?>
@@ -24,15 +52,15 @@ require_once '..'
 
 	<form action="#" method="post">
 	    <p><label for="nome">Nome:</label>
-	    <input type="text" name="" id="nome" required></p>
+	    <input type="text" name="nome" id="nome" required></p>
         
       <p><label for="primeira">Primeira nota:</label>
-	    <input type="number" name="" id="primeira" step="0.1" min="0.0" max="10" required></p>
+	    <input type="number" name="primeira" id="primeira" step="0.1" min="0.0" max="10" required></p>
 	    
 	    <p><label for="segunda">Segunda nota:</label>
-	    <input type="number" name="" id="segunda" step="0.1" min="0.0" max="10" required></p>
+	    <input type="number" name="segunda" id="segunda" step="0.1" min="0.0" max="10" required></p>
 	    
-      <button name="">Cadastrar aluno</button>
+      <button type="submit" name="inserir">Cadastrar aluno</button>
 	</form>
 
     <hr>
