@@ -1,8 +1,8 @@
 <?php
 $servidor = "localhost";
-$usuario = "root";
-$senha = "";
-$banco = "crud_escola_palloma";
+$usuario = "webmaio_palloma";
+$senha = "Palloma2001";
+$banco = "webmaio_palloma";
 
 try {
     $conexao = new PDO(

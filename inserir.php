@@ -1,14 +1,9 @@
 <?php
 
+require_once '../exercicio-php-crud/src/funcoes-alunos.php';
 
 if( isset($_POST['inserir']) ){
 
-	require_once '../exercicio-php-crud/src/funcoes-alunos.php';
-
-
-	$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
-
-	
 
 	$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
 	$primeira = filter_input(INPUT_POST, 'primeira', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);

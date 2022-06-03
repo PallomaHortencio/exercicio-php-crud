@@ -39,7 +39,8 @@ $listaDeAlunos = verAlunos($conexao);
     <p><h4> Media </h4> <?=$alunos["media"] ?> </p>
     <p> <h4> Situação </h4> <?=$alunos["situacao"] ?></p>
 
-    <p><a href="atualizar.php">Atualizar</a></p>
+    <p><a href="atualizar.php?id=<?=$alunos["id"]?>">Atualizar</a></p>
+    <p><a href="excluir.php?id=<?=$alunos["id"]?>">Excluir</a></p>
 
  
     
