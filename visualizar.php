@@ -22,6 +22,8 @@ $listaDeAlunos = verAlunos($conexao);
     <hr>
     <p><a href="inserir.php">Inserir novo aluno</a></p>
 
+ 
+
     <?php
     foreach ($listaDeAlunos as $alunos) {
 
@@ -31,12 +33,15 @@ $listaDeAlunos = verAlunos($conexao);
 
 
 
-   <p> <h4> Nome </h4> <?=$alunos["nome"] ?> </p>
+    <p> <h4> Nome </h4> <?=$alunos["nome"] ?> </p>
     <p> <h4> Primeita Nota </h4> <?=$alunos["primeira"] ?> </p>
-   <p> <h4> Segunda Nota </h4> <?=$alunos["segunda"] ?> </p>
-   <p><h4> Media </h4> <?=$alunos["media"] ?> </p>
+    <p> <h4> Segunda Nota </h4> <?=$alunos["segunda"] ?> </p>
+    <p><h4> Media </h4> <?=$alunos["media"] ?> </p>
     <p> <h4> Situação </h4> <?=$alunos["situacao"] ?></p>
- name="atualizar">Atualizar
+
+    <p><a href="atualizar.php">Atualizar</a></p>
+
+ 
     
 
    <!-- Aqui você deverá criar o HTML que quiser e o PHP necessários

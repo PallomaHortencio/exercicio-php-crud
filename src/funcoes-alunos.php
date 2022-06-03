@@ -2,6 +2,8 @@
 require_once "conecta.php";
 
 
+
+/* Inserir aluno */
 function inserirAluno(PDO $conexao, string $nome, float $primeira, float $segunda, float $media, string $situacao):void {
     $sql = "INSERT INTO alunos(nome, primeira, segunda, media, situacao) VALUES (:nome, :primeira, :segunda, :media, :situacao)";
     try {
@@ -21,7 +23,7 @@ function inserirAluno(PDO $conexao, string $nome, float $primeira, float $segund
 
 
 
-
+/* ver os dados */
 function verAlunos(PDO $conexao):array {
     $sql = "SELECT id, nome, primeira, segunda, media, situacao FROM alunos ORDER BY id";
     try {
@@ -37,7 +39,7 @@ function verAlunos(PDO $conexao):array {
 
 
 
-
+/* ver dados de um aluno */
 function verUmAluno(PDO $conexao, int $id):array {
     $sql = "SELECT id, nome, primeira, segunda, media, situacao FROM alunos WHERE id = :id";
 
@@ -53,6 +55,7 @@ function verUmAluno(PDO $conexao, int $id):array {
 }
 
 
+/* atualizar */
 function atualizarAluno(PDO $conexao, int $id, float $primeira, float $segunda) {
     $sql = "UPDATE alunos SET primeira = :primeira, segunda = :segunda WHERE id = :id";
 
@@ -64,8 +67,6 @@ function atualizarAluno(PDO $conexao, int $id, float $primeira, float $segunda) 
         die("Erro: " .$erro->getMessage());
     }
 }
-
-
 
 
 
