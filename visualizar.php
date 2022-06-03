@@ -1,6 +1,6 @@
 <?php
 require_once "../exercicio-php-crud/src/funcoes-alunos.php";
-require_once "../exercicio-php-crud/atualizar.php";
+
 $listaDeAlunos = verAlunos($conexao);
 ?>
 
@@ -30,16 +30,14 @@ $listaDeAlunos = verAlunos($conexao);
 
 
 
-<table>
-    <tr>
-    <td> <h4> Nome </h4> <?=$alunos["nome"] ?>  </td>
-    <td> <h4> Primeita Nota </h4> <?=$alunos["primeira"] ?> </td>
-   <td> <h4> Segunda Nota </h4> <?=$alunos["segunda"] ?> </td>
-    <td> <h4> Media </h4> <?=$alunos["media"] ?> </td>
-    <td> <h4> Situação </h4> <?=$alunos["situacao"] ?> </td>
-<button type="submit" name="atualizar">Atualizar</button>
-</tr>
-</table>    
+
+   <p> <h4> Nome </h4> <?=$alunos["nome"] ?> </p>
+    <p> <h4> Primeita Nota </h4> <?=$alunos["primeira"] ?> </p>
+   <p> <h4> Segunda Nota </h4> <?=$alunos["segunda"] ?> </p>
+   <p><h4> Media </h4> <?=$alunos["media"] ?> </p>
+    <p> <h4> Situação </h4> <?=$alunos["situacao"] ?></p>
+ name="atualizar">Atualizar
+    
 
    <!-- Aqui você deverá criar o HTML que quiser e o PHP necessários
 para exibir a relação de alunos existentes no banco de dados.
