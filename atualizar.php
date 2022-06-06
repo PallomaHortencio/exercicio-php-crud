@@ -70,7 +70,7 @@ if(isset($_POST['atualizar'])){
         <!-- Campo somente leitura e desabilitado para edição 
         Usado apenas para exibição do texto da situação -->
             <label for="situacao">Situação:</label>
-	        <input value="<?=$listaDeAlunos['situacao']?>" type="text" name="situacao" id="situacao" readonly disabled>
+	        <input value="<?=$listaDeAlunos["situacao"]?>" type="text" name="situacao" id="situacao" readonly disabled>
         </p>
 	    
         <button type="submit" name="atualizar">Atualizar</button>
