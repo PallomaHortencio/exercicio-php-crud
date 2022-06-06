@@ -51,19 +51,19 @@ if(isset($_POST['atualizar'])){
     <form action="#" method="post">
         
 	    <p><label for="nome">Nome:</label>
-	    <input  value="<?=$listaDeAlunos['nome']?>" type="text" name="nome" id="nome" required></p>
+	    <input  value="<?=$listaDeAlunos["nome"]?>" type="text" name="nome" id="nome" required></p>
         
         <p><label for="primeira">Primeira nota:</label>
-	    <input value="<?=$listaDeAlunos['primeira']?>" name="primeira" type="number" id="primeira" step="0.1" min="0.0" max="10" required></p>
+	    <input value="<?=$listaDeAlunos["primeira"]?>" name="primeira" type="number" id="primeira" step="0.1" min="0.0" max="10" required></p>
 	    
 	    <p><label for="segunda">Segunda nota:</label>
-	    <input value="<?=$listaDeAlunos['segunda']?>" name="segunda" type="number" id="segunda" step="0.1" min="0.0" max="10" required></p>
+	    <input value="<?=$listaDeAlunos["segunda"]?>" name="segunda" type="number" id="segunda" step="0.1" min="0.0" max="10" required></p>
 
         <p>
         <!-- Campo somente leitura e desabilitado para edição.
         Usado apenas para exibição do valor da média -->
             <label for="media">Média:</label>
-            <input value="<?=$listaDeAlunos['media']?>" name="media" type="number" id="media" step="0.1" min="0.0" max="10" readonly disabled>
+            <input value="<?=$listaDeAlunos["media"]?>" name="media" type="number" id="media" step="0.1" min="0.0" max="10" readonly disabled>
         </p>
 
         <p>
