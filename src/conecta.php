@@ -1,6 +1,6 @@
 <?php
 $servidor = "localhost";
-$usuario = "webmaio_palloma";
+$usuario = "webmaio1_palloma";
 $senha = "Palloma2001";
 $banco = "webmaio1_palloma";
 
